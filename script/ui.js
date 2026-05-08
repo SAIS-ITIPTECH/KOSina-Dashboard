@@ -523,7 +523,8 @@ class DatabaseConnector{
     }
 
     async patch(body, id){
-        let data = await fetch(`https://kosina-api.up.railway.app//${this.target}/${id}`,{
+        console.log(id);
+        let data = await fetch(`https://kosina-api.up.railway.app/${this.target}/${id}`,{
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json; charset=utf-8",
@@ -535,6 +536,7 @@ class DatabaseConnector{
     }
 
     async delete(id){
+        console.log(id);
         let data = await fetch(`https://kosina-api.up.railway.app/${this.target}/${id}`,{
             method: "DELETE",
             headers: {
