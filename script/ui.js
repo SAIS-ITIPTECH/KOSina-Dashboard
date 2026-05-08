@@ -989,8 +989,7 @@ class UploadPanel{
 
     results(data){
         if (data["status"] === "error") {
-            window.alert(`WELCOME BACK`);
-            
+            window.alert(`${data["message"]}`);
         }
         else{
             window.alert(`${data["message"]}`);
